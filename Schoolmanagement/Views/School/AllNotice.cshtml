@@ -1,0 +1,55 @@
+﻿@model Schoolmanagement.BusinessLayer.ViewModels.NoticeViewModel
+@{
+    ViewData["Title"] = "AllNotice";
+}
+<div class="card" style="width:100%; margin-top:0px;">
+    <div class="card-header bg-dark text-white">
+        <h3 class="text-center text-uppercase">School Management Notice</h3>
+    </div>
+</div>
+<p>
+    @using (Html.BeginForm("School", "AllNotice", FormMethod.Get))
+    {
+        <b>Search By:</b>
+        <text>Notice Name and Event  : </text> @Html.TextBox("search") <input type="submit" name="submit" value="Search" />
+        @Html.ActionLink(" | Back to full List", "AllNotice", new { @class = "btn btn-primary" })
+    }
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th>@Html.DisplayNameFor(m => m.NoticeDate)</th>
+            <th>@Html.DisplayNameFor(m => m.classList)</th>
+            <th>@Html.DisplayNameFor(m => m.Event)</th>
+            <th>@Html.DisplayNameFor(m => m.ChiefGuest)</th>
+            <th>@Html.DisplayNameFor(m => m.Remarks)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.PageCount() == 0)
+        {
+            <tr>
+                <td style="color:red;" colspan="12">
+                    Records not found |
+                    @Html.ActionLink("Go to all Notice", "AllNotice", new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var notice in Model.PaginatedNotice())
+            {
+                <tr>
+                    <td>@notice.Name</td>
+                    <td>@notice.NoticeDate.ToShortDateString()</td>
+                    <td>@notice.classList</td>
+                    <td>@notice.Event</td>
+                    <td>@notice.ChiefGuest</td>
+                    <td>@notice.Remarks</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

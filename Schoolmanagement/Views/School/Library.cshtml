@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Schoolmanagement.Entities.Library>
+@{
+    ViewData["Title"] = "All Book";
+}
+
+<div class="card" style="width:100%; margin-top:0px;">
+    <div class="card-header bg-success text-white">
+        <h3 class="text-center text-uppercase">School Library</h3>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.BookName)</th>
+            <th>@Html.DisplayNameFor(m => m.Publication)</th>
+            <th>@Html.DisplayNameFor(m => m.Writer)</th>
+            <th>@Html.DisplayNameFor(m => m.Stock)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookName</td>
+                <td>@book.Publication</td>
+                <td>@book.Writer</td>
+                <td>@book.Stock</td>
+                <td>@Html.ActionLink("Borrow Book", "Borrowbook", "School", new { BookId = book.BookId, @class = "btn btn-primary" })</td>
+            </tr>
+        }
+    </tbody>
+</table>

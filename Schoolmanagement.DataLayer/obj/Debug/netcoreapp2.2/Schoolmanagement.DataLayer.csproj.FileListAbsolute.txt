@@ -1,0 +1,15 @@
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.deps.json
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.runtimeconfig.json
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.runtimeconfig.dev.json
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.dll
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.pdb
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.Entities.dll
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\bin\Debug\netcoreapp2.2\Schoolmanagement.Entities.pdb
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.csprojAssemblyReference.cache
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.AssemblyInfoInputs.cache
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.AssemblyInfo.cs
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.csproj.CoreCompileInputs.cache
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.csproj.CopyComplete
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.dll
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.pdb
+D:\IIHT\Task-9\School\Schoolmanagement.DataLayer\obj\Debug\netcoreapp2.2\Schoolmanagement.DataLayer.genruntimeconfig.cache

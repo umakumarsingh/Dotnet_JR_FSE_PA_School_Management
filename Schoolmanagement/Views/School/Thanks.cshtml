@@ -1,0 +1,40 @@
+﻿@model Schoolmanagement.Entities.BookBorrow
+@{
+    ViewData["Title"] = "Borrow Book Information";
+}
+    <div class="card" style="width:60%; margin:auto;">
+        <div class="card-header bg-dark text-white">
+            <h5>Book Borrow information</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <tr>
+                    <td>
+                        <b>@Html.DisplayNameFor(m => m.BorrowId)</b>
+                    </td>
+                    <td>@Html.DisplayFor(m => m.BorrowId)</td>
+                    <td>
+                        <b>@Html.DisplayNameFor(m => m.BookId)</b>
+                    </td>
+                    <td>@Html.DisplayFor(m => m.BookId)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>@Html.DisplayNameFor(m => m.FromDate)</b>
+                    </td>
+                    <td>@Html.DisplayFor(m => m.FromDate)</td>
+                    <td>
+                        <b>@Html.DisplayNameFor(m => m.Todate)</b>
+                    </td>
+                    <td>@Html.DisplayFor(m => m.Todate)</td>
+                </tr>
+            </table>
+            <p>
+                @Html.ActionLink("Go To Home", "AllNotice", "School", new { @class = "btn btn-danger" })
+                @Html.ActionLink("Back to Book List", "Library", "School", new { @class = "btn btn-primary" })
+            </p>
+        </div>
+        <div class="card-footer bg-danger text-white">
+            <h3>Note Your Borrow Infromation and use while collecting Book from Library</h3>
+        </div>
+    </div>

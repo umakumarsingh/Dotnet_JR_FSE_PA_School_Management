@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Schoolmanagement.Entities.Teacher>
+@{
+    ViewData["Title"] = "All Teachers";
+}
+
+<div class="card" style="width:100%; margin-top:0px;">
+    <div class="card-header bg-success text-white">
+        <h3 class="text-center text-uppercase">School Teachers Information</h3>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th>@Html.DisplayNameFor(m => m.Address)</th>
+            <th>@Html.DisplayNameFor(m => m.Email)</th>
+            <th>@Html.DisplayNameFor(m => m.PhoneNumber)</th>
+            <th>@Html.DisplayNameFor(m => m.Subject)</th>
+            <th>@Html.DisplayNameFor(m => m.Experience)</th>
+            <th>@Html.DisplayNameFor(m => m.Remark)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teacher in Model)
+        {
+            <tr>
+                <td>@teacher.Name</td>
+                <td>@teacher.Address</td>
+                <td>@teacher.Email</td>
+                <td>@teacher.PhoneNumber</td>
+                <td>@teacher.Subject</td>
+                <td>@teacher.Experience</td>
+                <td>@teacher.Remark</td>
+            </tr>
+        }
+    </tbody>
+</table>
