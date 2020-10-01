@@ -10,65 +10,100 @@ namespace Schoolmanagement.BusinessLayer.Services
 {
     public class SchoolServices : ISchoolServices
     {
+        /// <summary>
+        /// Creating referance variable of ISchoolRepository and injecting in SchoolServices constructor
+        /// </summary>
         private readonly ISchoolRepository _sRepository;
 
         public SchoolServices(ISchoolRepository schoolRepository)
         {
             _sRepository = schoolRepository;
         }
-
+        /// <summary>
+        /// Get All book
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<Library>> AllBook()
         {
-            var book = await _sRepository.AllBook();
-            return book;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// get all notice
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<Notice>> AllNotice()
         {
-            var result = await _sRepository.AllNotice();
-            return result;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// get all student
+        /// </summary>
+        /// <returns></returns>
         public Task<IEnumerable<Student>> AllStudent()
         {
-            var result = _sRepository.AllStudent();
-            return result;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Get all teachers
+        /// </summary>
+        /// <returns></returns>
         public Task<IEnumerable<Teacher>> AllTeacher()
         {
-            var result = _sRepository.AllTeacher();
-            return result;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Get list of all book
+        /// </summary>
+        /// <returns></returns>
         public Task<IEnumerable<Library>> BookList()
         {
-            var result = _sRepository.BookList();
-            return result;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Place a request fro borrow book from library
+        /// </summary>
+        /// <param name="BookId"></param>
+        /// <param name="bookBorrow"></param>
+        /// <returns></returns>
         public Task<BookBorrow> BorrowBook(int BookId, BookBorrow bookBorrow)
         {
-            var result = _sRepository.BorrowBook(BookId, bookBorrow);
-            return result;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Show book borrow information for user
+        /// </summary>
+        /// <param name="BorrowId"></param>
+        /// <returns></returns>
         public async Task<BookBorrow> BorrowInfo(int BorrowId)
         {
-            var bookinfo = await _sRepository.BorrowInfo(BorrowId);
-            return bookinfo;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Find a existing notice by its type and name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Notice>> FindNotice(string name)
         {
-            var findresult = await _sRepository.FindNotice(name);
-            return findresult;
+            //Do code here
+            throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Find student by name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Student>> FindStudent(string name)
         {
-            var findstudent = await _sRepository.FindStudent(name);
-            return findstudent;
+            //Do code here
+            throw new NotImplementedException();
         }
     }
 }

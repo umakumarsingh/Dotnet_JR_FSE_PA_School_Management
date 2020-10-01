@@ -8,6 +8,10 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
 {
     public interface ISchoolRepository
     {
+        /// <summary>
+        /// List of method that complete the CURD Operation for Case study
+        /// </summary>
+        /// <returns></returns>
         Task<IEnumerable<Notice>> AllNotice();
         Task<IEnumerable<Notice>> FindNotice(string name);
         Task<IEnumerable<Student>> AllStudent();

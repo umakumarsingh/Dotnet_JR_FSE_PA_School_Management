@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bNYw2wUE7fN7h4fFtst8kph0GMzmmnF8G0iAJ4HlEIR4DE6BVAODXwHXEExvtdZ0QUi6NgJfqQ2MaXHsccFE+w==",
+  "dgSpecHash": "XvFAuf8dV///O6nlGO7NfF4ZAG7HdwzY+ykUH4AQ5iYGSlG/NBjVocDl6W2BAblUdkUU8JHJM6v5lyvXgZHnmA==",
   "success": true,
-  "projectFilePath": "D:\\IIHT\\Task-9\\School\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
+  "projectFilePath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KUMARUMA\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.0\\microsoft.entityframeworkcore.2.2.0.nupkg.sha512",
     "C:\\Users\\KUMARUMA\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.2.0\\microsoft.entityframeworkcore.abstractions.2.2.0.nupkg.sha512",
