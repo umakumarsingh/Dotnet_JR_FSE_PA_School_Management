@@ -4,11 +4,10 @@ using Schoolmanagement.BusinessLayer.Services;
 using Schoolmanagement.BusinessLayer.Services.Repository;
 using Schoolmanagement.Entities;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Schoolmanagement.Test.TestCases
 {
@@ -17,6 +16,7 @@ namespace Schoolmanagement.Test.TestCases
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
         /// </summary>
+        private readonly ITestOutputHelper _output;
         private readonly ISchoolServices _SchoolServices;
         public readonly Mock<ISchoolRepository> service = new Mock<ISchoolRepository>();
         private readonly Notice _notice;
@@ -24,9 +24,10 @@ namespace Schoolmanagement.Test.TestCases
         private readonly Library _library;
         private readonly Teacher _teacher;
         private readonly BookBorrow _bookBorrow;
-        public FuctionalTests()
+        public FuctionalTests(ITestOutputHelper output)
         {
             //Creating New mock Object with value.
+            _output = output;
             _SchoolServices = new SchoolServices(service.Object);
             _notice = new Notice
             {
@@ -103,16 +104,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.AllNotice());
-            var result = await _SchoolServices.AllNotice();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.AllNotice());
+                var result = await _SchoolServices.AllNotice();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllNotice=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllNotice=" + res + "\n");
             return res;
         }
@@ -125,16 +147,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.FindNotice(_notice.Name));
-            var result = await _SchoolServices.FindNotice(_notice.Name);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.FindNotice(_notice.Name));
+                var result = await _SchoolServices.FindNotice(_notice.Name);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_FindNotice=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_FindNotice=" + res + "\n");
             return res;
         }
@@ -147,16 +190,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.AllStudent());
-            var result = await _SchoolServices.AllStudent();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.AllStudent());
+                var result = await _SchoolServices.AllStudent();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllStudent=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllStudent=" + res + "\n");
             return res;
         }
@@ -169,16 +233,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.FindStudent(_student.Name));
-            var result = await _SchoolServices.FindStudent(_student.Name);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.FindStudent(_student.Name));
+                var result = await _SchoolServices.FindStudent(_student.Name);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_FindStudent=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_FindStudent=" + res + "\n");
             return res;
         }
@@ -191,16 +276,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.BookList());
-            var result = await _SchoolServices.BookList();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.BookList());
+                var result = await _SchoolServices.BookList();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetBookList=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetBookList=" + res + "\n");
             return res;
         }
@@ -213,16 +319,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.AllTeacher());
-            var result = await _SchoolServices.AllTeacher();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.AllTeacher());
+                var result = await _SchoolServices.AllTeacher();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllTeacher=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllTeacher=" + res + "\n");
             return res;
         }
@@ -235,16 +362,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.AllBook());
-            var result = await _SchoolServices.AllBook();
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.AllBook());
+                var result = await _SchoolServices.AllBook();
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllBook=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_GetAllBook=" + res + "\n");
             return res;
         }
@@ -257,16 +405,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
-            var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
+                var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_BorrowBook=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_BorrowBook=" + res + "\n");
             return res;
         }
@@ -279,16 +448,37 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             var res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Action
-            service.Setup(repos => repos.BorrowInfo(_bookBorrow.BorrowId)).ReturnsAsync(_bookBorrow);
-            var result = await _SchoolServices.BorrowInfo(_bookBorrow.BorrowId);
-            //Assertion
-            if (result != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.BorrowInfo(_bookBorrow.BorrowId)).ReturnsAsync(_bookBorrow);
+                var result = await _SchoolServices.BorrowInfo(_bookBorrow.BorrowId);
+                //Assertion
+                if (result != null)
+                {
+                    res = true;
+                }
+            }
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_BorrowInfo=" + res + "\n");
+                return false;
             }
             //Assert
-            //final result displaying in text file
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_revised.txt", "Testfor_BorrowInfo=" + res + "\n");
             return res;
         }

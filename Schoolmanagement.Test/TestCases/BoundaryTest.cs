@@ -9,6 +9,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Schoolmanagement.Test.TestCases
 {
@@ -17,6 +18,7 @@ namespace Schoolmanagement.Test.TestCases
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
         /// </summary>
+        private readonly ITestOutputHelper _output;
         private readonly ISchoolServices _SchoolServices;
         public readonly Mock<ISchoolRepository> service = new Mock<ISchoolRepository>();
         private readonly Notice _notice;
@@ -24,8 +26,9 @@ namespace Schoolmanagement.Test.TestCases
         private readonly Library _library;
         private readonly Teacher _teacher;
         private readonly BookBorrow _bookBorrow;
-        public BoundaryTest()
+        public BoundaryTest(ITestOutputHelper output)
         {
+            _output = output;
             _SchoolServices = new SchoolServices(service.Object);
             _notice = new Notice
             {
@@ -102,15 +105,36 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
-            var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
-            if (result.BorrowId == _bookBorrow.BorrowId)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
+                var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
+                if (result.BorrowId == _bookBorrow.BorrowId)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateBorrowBookId=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_ValidateBorrowBookId=" + res + "\n");
             return res;
         }
@@ -144,15 +168,36 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             //Act
-            service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
-            var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
-            if (result.Todate != null)
+            try
             {
-                res = true;
+                service.Setup(repos => repos.BorrowBook(_library.BookId, _bookBorrow)).ReturnsAsync(_bookBorrow);
+                var result = await _SchoolServices.BorrowBook(_library.BookId, _bookBorrow);
+                if (result.Todate != null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_Validate_ToDate_Notnull=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_boundary_revised.txt", "Testfor_Validate_ToDate_Notnull=" + res + "\n");
             return res;
         }

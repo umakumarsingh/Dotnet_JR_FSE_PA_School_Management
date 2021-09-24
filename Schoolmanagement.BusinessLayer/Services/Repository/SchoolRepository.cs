@@ -12,16 +12,15 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
     public class SchoolRepository : ISchoolRepository
     {
         /// <summary>
-        /// Creating Referance variable of DbContext and Injecting in Constructor
+        /// Creating referance variable SchoolDbContext and injecting in SchoolRepository constructor
         /// </summary>
         private readonly SchoolDbContext _schoolDbContext;
-
         public SchoolRepository(SchoolDbContext schoolDbContext)
         {
             _schoolDbContext = schoolDbContext;
         }
         /// <summary>
-        /// Get all book from InMemory Db
+        /// Get all book from database
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<Library>> AllBook()
@@ -30,7 +29,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return book;
         }
         /// <summary>
-        /// Get all Notice from InMemory Db
+        /// Get all notice from databse and show on main page
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<Notice>> AllNotice()
@@ -39,7 +38,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return notice;
         }
         /// <summary>
-        /// Get all Student from InMemory Db
+        /// get all student from database
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<Student>> AllStudent()
@@ -48,7 +47,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return student;
         }
         /// <summary>
-        /// Get all Teachers from InMemory Db
+        /// Get all teacher from databse
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<Teacher>> AllTeacher()
@@ -57,7 +56,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return teacher;
         }
         /// <summary>
-        /// Get all book from InMemory Db
+        /// Get all book list from databse
         /// </summary>
         /// <returns></returns>
         public async Task<IEnumerable<Library>> BookList()
@@ -66,7 +65,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return book;
         }
         /// <summary>
-        /// Borrow a book from libray, this methos place a borrow request
+        /// Borrow a book
         /// </summary>
         /// <param name="BookId"></param>
         /// <param name="bookBorrow"></param>
@@ -81,7 +80,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return bookBorrow;
         }
         /// <summary>
-        /// Get Borrow Book and Book Id information
+        /// Get borrow book info and use while returining book
         /// </summary>
         /// <param name="BorrowId"></param>
         /// <returns></returns>
@@ -93,7 +92,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return result;
         }
         /// <summary>
-        /// Find a notice by its name and event
+        /// Find an existing notice by name
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -104,7 +103,7 @@ namespace Schoolmanagement.BusinessLayer.Services.Repository
             return result;
         }
         /// <summary>
-        /// Find a sytudent by name
+        /// Faind an existing student by name
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>

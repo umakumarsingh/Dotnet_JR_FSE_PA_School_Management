@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj": {}
+    "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj": {}
   },
   "projects": {
-    "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj": {
+    "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
         "projectName": "Schoolmanagement.BusinessLayer",
-        "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,12 +29,13 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj"
               },
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
               }
             }
           }
@@ -47,6 +48,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -65,24 +67,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
+    "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj",
         "projectName": "Schoolmanagement.DataLayer",
-        "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,9 +96,10 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
               }
             }
           }
@@ -109,6 +112,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -141,24 +145,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
+    "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj",
         "projectName": "Schoolmanagement.Entities",
-        "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,6 +174,7 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {}
           }
         },
@@ -181,6 +186,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -199,24 +205,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj": {
+    "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj",
+        "projectUniqueName": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj",
         "projectName": "Schoolmanagement",
-        "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj",
-        "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\obj\\",
+        "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj",
+        "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+        "outputPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -228,15 +234,16 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.BusinessLayer\\Schoolmanagement.BusinessLayer.csproj"
               },
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.DataLayer\\Schoolmanagement.DataLayer.csproj"
               },
-              "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
-                "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
+              "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj": {
+                "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Entities\\Schoolmanagement.Entities.csproj"
               }
             }
           }
@@ -249,6 +256,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
@@ -282,7 +290,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

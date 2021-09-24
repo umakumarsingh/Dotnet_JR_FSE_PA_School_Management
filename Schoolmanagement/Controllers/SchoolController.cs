@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Schoolmanagement.BusinessLayer.Interfaces;
@@ -13,16 +10,15 @@ namespace Schoolmanagement.Controllers
     public class SchoolController : Controller
     {
         /// <summary>
-        /// Creating a referance variable of ISchoolServices and injecting in SchoolController constructor
+        /// Creating referance variable of ISchoolServices and injecting in SchoolController constructor
         /// </summary>
         private readonly ISchoolServices _schoolServices;
-
         public SchoolController(ISchoolServices schoolServices)
         {
             _schoolServices = schoolServices;
         }
         /// <summary>
-        /// Get all School Notice and using this method find notice by Notice name and Event type
+        /// Get all School Notice and using this method find notice ny Notice name and Event type
         /// </summary>
         /// <param name="search"></param>
         /// <param name="page"></param>
@@ -30,11 +26,29 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> AllNotice(string search, int page = 1)
         {
-            //Do code here
-            throw new NotImplementedException();
+            if (search != null)
+            {
+                var intView = new NoticeViewModel
+                {
+                    NoticePerPage = 5,
+                    Notices = await _schoolServices.FindNotice(search),
+                    CurrentPage = page
+                };
+                return View(intView);
+            }
+            else
+            {
+                var intView = new NoticeViewModel
+                {
+                    NoticePerPage = 5,
+                    Notices = await _schoolServices.AllNotice(),
+                    CurrentPage = page
+                };
+                return View(intView);
+            }
         }
         /// <summary>
-        /// Get all School Student and using this method find Student by name
+        /// Get all School student and using this method find student by name
         /// </summary>
         /// <param name="search"></param>
         /// <param name="page"></param>
@@ -42,31 +56,49 @@ namespace Schoolmanagement.Controllers
         [HttpGet]
         public async Task<IActionResult> AllStudent(string search, int page = 1)
         {
-            //Do code here
-            throw new NotImplementedException();
+            if (search != null)
+            {
+                var intView = new StudentViewModel
+                {
+                    StudentPerPage = 5,
+                    Students = await _schoolServices.FindStudent(search),
+                    CurrentPage = page
+                };
+                return View(intView);
+            }
+            else
+            {
+                var intView = new StudentViewModel
+                {
+                    StudentPerPage = 5,
+                    Students = await _schoolServices.AllStudent(),
+                    CurrentPage = page
+                };
+                return View(intView);
+            }
         }
         /// <summary>
-        /// Get all teachers list.
+        /// Get all teachers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> AllTeacher()
         {
-            //Do code here
-            throw new NotImplementedException();
+            IEnumerable<Teacher> teacher = await _schoolServices.AllTeacher();
+            return View(teacher);
         }
         /// <summary>
-        /// Get all book list
+        /// Get all book from library
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Library()
         {
-            //Do code here
-            throw new NotImplementedException();
+            IEnumerable<Library> library = await _schoolServices.AllBook();
+            return View(library);
         }
         /// <summary>
-        /// Borrow book get method
+        /// Borrow/take book from library
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -75,7 +107,7 @@ namespace Schoolmanagement.Controllers
             return View();
         }
         /// <summary>
-        /// Borrow book from library and save borrow infromation under BookBorrow class.
+        /// Borrow/take book from library
         /// </summary>
         /// <param name="BookId"></param>
         /// <param name="borrow"></param>
@@ -84,19 +116,23 @@ namespace Schoolmanagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Borrowbook(int BookId, BookBorrow borrow)
         {
-            //Do code here
-            throw new NotImplementedException();
+            if (ModelState.IsValid)
+            {
+                var borrowresult = await _schoolServices.BorrowBook(BookId, borrow);
+                return RedirectToAction("Thanks","School", new { BorrowId = borrowresult.BorrowId });
+            }
+            return View();
         }
         /// <summary>
-        /// Get book borrow infromation and use while collecting book
+        /// Get the borrow book info and Id to use while returning
         /// </summary>
         /// <param name="BorrowId"></param>
         /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Thanks(int BorrowId)
         {
-            //Do code here
-            throw new NotImplementedException();
+            var bookinfo = await _schoolServices.BorrowInfo(BorrowId);
+            return View(bookinfo);
         }
     }
 }

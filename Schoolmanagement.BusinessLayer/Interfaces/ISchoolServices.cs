@@ -8,9 +8,6 @@ namespace Schoolmanagement.BusinessLayer.Interfaces
 {
     public interface ISchoolServices
     {
-        /// <summary>
-        /// List of method that complete the CURD Operation for Case study
-        /// </summary>
         Task<IEnumerable<Notice>> AllNotice();
         Task<IEnumerable<Notice>> FindNotice(string name);
         Task<IEnumerable<Student>> AllStudent();

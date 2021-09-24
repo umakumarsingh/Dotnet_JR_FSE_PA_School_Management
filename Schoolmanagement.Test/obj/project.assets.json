@@ -5535,12 +5535,11 @@
       ]
     },
     "System.Diagnostics.FileVersionInfo/4.3.0": {
-      "sha512": "omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==",
+      "sha512": "6WVi7gArhxRiC+3qI5V2mFe1gHENj/F7xT5PQiy/lI/RsxXeivrt09WF0huwSQK2ubnmyyRFeA9z3w743/w32A==",
       "type": "package",
       "path": "system.diagnostics.fileversioninfo/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8794,23 +8793,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KUMARUMA\\.nuget\\packages\\": {},
+    "C:\\Users\\Uma Kumar\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Test\\Schoolmanagement.Test.csproj",
+      "projectUniqueName": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Test\\Schoolmanagement.Test.csproj",
       "projectName": "Schoolmanagement.Test",
-      "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Test\\Schoolmanagement.Test.csproj",
-      "packagesPath": "C:\\Users\\KUMARUMA\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement.Test\\obj\\",
+      "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Test\\Schoolmanagement.Test.csproj",
+      "packagesPath": "C:\\Users\\Uma Kumar\\.nuget\\packages\\",
+      "outputPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\KUMARUMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Uma Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8822,9 +8821,10 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj": {
-              "projectPath": "D:\\GIT_Backup\\Dotnet_JR_FSE_PA_School_Management\\Schoolmanagement\\Schoolmanagement.csproj"
+            "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj": {
+              "projectPath": "D:\\IIHT DATA\\IIHT\\Task-9\\School_InMemory\\Schoolmanagement\\Schoolmanagement.csproj"
             }
           }
         }
@@ -8837,6 +8837,7 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
+        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -8875,7 +8876,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

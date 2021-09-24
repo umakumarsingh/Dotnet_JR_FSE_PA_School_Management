@@ -1,0 +1,9 @@
+Testfor_GetAllNotice=True
+Testfor_FindStudent=True
+Testfor_FindNotice=True
+Testfor_BorrowBook=True
+Testfor_BorrowInfo=True
+Testfor_GetAllTeacher=True
+Testfor_GetAllBook=True
+Testfor_GetBookList=True
+Testfor_GetAllStudent=True

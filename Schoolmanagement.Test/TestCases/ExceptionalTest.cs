@@ -4,11 +4,10 @@ using Schoolmanagement.BusinessLayer.Services;
 using Schoolmanagement.BusinessLayer.Services.Repository;
 using Schoolmanagement.Entities;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Schoolmanagement.Test.TestCases
 {
@@ -17,6 +16,7 @@ namespace Schoolmanagement.Test.TestCases
         /// <summary>
         /// Creating Referance Variable of Service Interface and Mocking Repository Interface and class
         /// </summary>
+        private readonly ITestOutputHelper _output;
         private readonly ISchoolServices _SchoolServices;
         public readonly Mock<ISchoolRepository> service = new Mock<ISchoolRepository>();
         private readonly Notice _notice;
@@ -24,8 +24,9 @@ namespace Schoolmanagement.Test.TestCases
         private readonly Library _library;
         private readonly Teacher _teacher;
         private readonly BookBorrow _bookBorrow;
-        public ExceptionalTest()
+        public ExceptionalTest(ITestOutputHelper output)
         {
+            _output = output;
             _SchoolServices = new SchoolServices(service.Object);
             _notice = new Notice
             {
@@ -102,6 +103,8 @@ namespace Schoolmanagement.Test.TestCases
         {
             //Arrange
             bool res = false;
+            string testName;
+            testName = TestUtils.GetCurrentMethodName();
             var bookBorrow = new BookBorrow
             {
                 BorrowId = 1,
@@ -110,14 +113,33 @@ namespace Schoolmanagement.Test.TestCases
             };
             bookBorrow = null;
             //Act
-            service.Setup(repo => repo.BorrowBook(_library.BookId, bookBorrow)).ReturnsAsync(bookBorrow = null);
-            var result = await _SchoolServices.BorrowBook(_library.BookId, bookBorrow);
-            if (result == null)
+            try
             {
-                res = true;
+                service.Setup(repo => repo.BorrowBook(_library.BookId, bookBorrow)).ReturnsAsync(bookBorrow = null);
+                var result = await _SchoolServices.BorrowBook(_library.BookId, bookBorrow);
+                if (result == null)
+                {
+                    res = true;
+                }
             }
-            //Asert
-            //final result displaying in text file
+            catch(Exception)
+            {
+                //Assert
+                //final result save in text file if exception raised
+                _output.WriteLine(testName + ":Failed");
+                await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidBookBorrow=" + res + "\n");
+                return false;
+            }
+            //Assert
+            //final result save in text file, Call rest API to save test result
+            if (res == true)
+            {
+                _output.WriteLine(testName + ":Passed");
+            }
+            else
+            {
+                _output.WriteLine(testName + ":Failed");
+            }
             await File.AppendAllTextAsync("../../../../output_exception_revised.txt", "Testfor_Validate_InvlidBookBorrow=" + res + "\n");
             return res;
         }
